@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato, Lora, Mulish } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["100", "300", "400", "700", "900"],
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>{children}</body>
     </html>
   );
 }
